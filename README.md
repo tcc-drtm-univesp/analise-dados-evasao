@@ -1,5 +1,13 @@
 # TCC Produto
-## Analise de dados sobre evasao
+<div align = "center">
+<div style="background-color: write;">  
+  <img src="C:\Users\lucie\Desktop\analise-dados-evasao\images\tcc.jpg">
+  <sub>
+    <p>Analise de dados sobre evasao</p><br>
+  </sub>
+</div>
+</div>
+
 
 ## Descrição
 Este é um trabalho de TCC feito por oito alunos da Univesp, com o objetivo de investigar possiveis causa de desistencia sobre no Ensino superior. 

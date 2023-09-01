@@ -1,7 +1,7 @@
 # TCC Produto
 <div align = "center">
 <div style="background-color: write;">  
-  <img src="C:\Users\lucie\Desktop\analise-dados-evasao\images\tcc.jpg">
+  <img src="\analise-dados-evasao\images\tcc.jpg">
   <sub>
     <p>Analise de dados sobre evasao</p><br>
   </sub>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>EVASAO_DW_SQL</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{3e9d25d1-f275-4c63-ae88-cbd229edd130}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>EVASAO_DW_SQL</RootNamespace>
+    <AssemblyName>EVASAO_DW_SQL</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="stg\" />
+    <Folder Include="stg\Tables\" />
+    <Folder Include="ods\" />
+    <Folder Include="ods\Tables\" />
+    <Folder Include="DW\" />
+    <Folder Include="DW\Tables\" />
+    <Folder Include="DW\Views\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="stg\Tables\STG_INDICADORES_TRAJETORIA_EDUCACAO_SUPERIOR_SP.sql" />
+    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_IES_SP.sql" />
+    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_CURSOS_SP.sql" />
+    <Build Include="ods\Tables\ODS_MUNICIPIO.sql" />
+    <Build Include="ods\Tables\ODS_MICRORREGIAO.sql" />
+    <Build Include="ods\Tables\ODS_MESORREGIAO.sql" />
+    <Build Include="ods\Tables\ODS_DADOS_FLUXO.sql" />
+    <Build Include="ods\Tables\ODS_CATALOGO.sql" />
+    <Build Include="ods\Tables\ODS_DADOS_IES.sql" />
+    <Build Include="ods\Tables\ODS_DADOS_CURSO.sql" />
+    <Build Include="ods\Tables\ODS_CURSO.sql" />
+    <Build Include="ods\Tables\ODS_CINE_AREA_DETALHADA.sql" />
+    <Build Include="ods\Tables\ODS_CINE_ROTULO.sql" />
+    <Build Include="ods\Tables\ODS_CINE_AREA_GERAL.sql" />
+    <Build Include="ods\Tables\ODS_CINE_AREA_ESPECIFICA.sql" />
+    <Build Include="ods\Tables\ODS_CINE.sql" />
+    <Build Include="ods\Tables\ODS_IES.sql" />
+    <Build Include="ods\Tables\ODS_UNIDADE_FEDERATIVA.sql" />
+    <Build Include="ods\Tables\ODS_MANTENEDORA_IES.sql" />
+    <Build Include="DW\Tables\DIM_REGIAO.sql" />
+    <Build Include="DW\Tables\DIM_IES.sql" />
+    <Build Include="DW\Tables\FTO_DADOS_FLUXO.sql" />
+    <Build Include="DW\Tables\FTO_DADOS_IES.sql" />
+    <Build Include="DW\Tables\DIM_CINE.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_NIVEL_ACADEMICO.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_MODALIDADE_ENSINO.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_GRAU_ACADEMICO.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_CATEGORIA_ADMINISTRATIVA.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_ORGANIZACAO_ACADEMICA.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_DIMENSAO.sql" />
+    <Build Include="DW\Views\VW_DIM_TIPO_REDE.sql" />
+    <Build Include="Security\stg.sql" />
+    <Build Include="Security\ods.sql" />
+    <Build Include="Security\DW.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [ods].[ODS_MESORREGIAO] (
+    [CO_MESORREGIAO] INT           NULL,
+    [NO_MESORREGIAO] VARCHAR (100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [CO_UF]          TINYINT       NULL
+);
+

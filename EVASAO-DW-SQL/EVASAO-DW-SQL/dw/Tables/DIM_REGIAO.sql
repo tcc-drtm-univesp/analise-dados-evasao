@@ -1,0 +1,12 @@
+﻿CREATE TABLE [DW].[DIM_REGIAO] (
+    [CO_MUNICIPIO]    INT           NOT NULL,
+    [NO_MUNICIPIO]    VARCHAR (100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [CO_MICRORREGIAO] INT           NULL,
+    [NO_MICRORREGIAO] VARCHAR (100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [CO_MESORREGIAO]  INT           NULL,
+    [NO_MESORREGIAO]  VARCHAR (100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [CO_UF]           SMALLINT      NOT NULL,
+    [NO_UF]           VARCHAR (30)  COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [SG_UF]           CHAR (2)      COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+);
+

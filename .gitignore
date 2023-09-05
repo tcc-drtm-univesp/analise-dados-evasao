@@ -161,3 +161,5 @@ cython_debug/
 *.sqlproj.AssemblyReference.cache
 *.sqlproj.user
 *.suo
+EVASAO-DW-SQL/EVASAO-DW-SQL/EVASAO-DW-SQL.dbmdl
+EVASAO-DW-SQL/EVASAO-DW-SQL/EVASAO-DW-SQL.jfm

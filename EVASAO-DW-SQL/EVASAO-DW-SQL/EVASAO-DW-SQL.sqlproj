@@ -81,7 +81,6 @@
     <Build Include="ods\Tables\ODS_CINE_ROTULO.sql" />
     <Build Include="ods\Tables\ODS_CINE_AREA_GERAL.sql" />
     <Build Include="ods\Tables\ODS_CINE_AREA_ESPECIFICA.sql" />
-    <Build Include="ods\Tables\ODS_CINE.sql" />
     <Build Include="ods\Tables\ODS_IES.sql" />
     <Build Include="ods\Tables\ODS_UNIDADE_FEDERATIVA.sql" />
     <Build Include="ods\Tables\ODS_MANTENEDORA_IES.sql" />
@@ -90,15 +89,23 @@
     <Build Include="DW\Tables\FTO_DADOS_FLUXO.sql" />
     <Build Include="DW\Tables\FTO_DADOS_IES.sql" />
     <Build Include="DW\Tables\DIM_CINE.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_NIVEL_ACADEMICO.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_MODALIDADE_ENSINO.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_GRAU_ACADEMICO.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_CATEGORIA_ADMINISTRATIVA.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_ORGANIZACAO_ACADEMICA.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_DIMENSAO.sql" />
-    <Build Include="DW\Views\VW_DIM_TIPO_REDE.sql" />
     <Build Include="Security\stg.sql" />
     <Build Include="Security\ods.sql" />
     <Build Include="Security\DW.sql" />
+    <Build Include="ods\Tables\ODS_REGIAO.sql" />
+    <Build Include="DW\Tables\FTO_DADOS_CURSO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_REDE.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_ORGANIZACAO_ACADEMICA.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_NIVEL_ACADEMICO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_MODALIDADE_ENSINO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_GRAU_ACADEMICO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_DIMENSAO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_CATEGORIA_ADMINISTRATIVA.sql" />
+    <Build Include="DW\Tables\DIM_CURSO.sql" />
+    <Build Include="Security\etl_user.sql" />
+    <Build Include="DW\Views\VW_FTO_DADOS_FLUXO.sql" />
+    <Build Include="DW\Views\VW_FTO_DADOS_CURSO.sql" />
+    <Build Include="stg\Tables\STG_RELATORIO_DTB_BRASIL_DISTRITO.sql" />
+    <Build Include="DW\Views\vw_fto_dados_ies.sql" />
   </ItemGroup>
 </Project>

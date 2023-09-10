@@ -1,3 +1,7 @@
 ﻿CREATE SCHEMA [stg]
-    AUTHORIZATION [dbo];
+    AUTHORIZATION [etl_user];
+
+
+
+
 

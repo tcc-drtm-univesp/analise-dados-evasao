@@ -1,31 +1,50 @@
-﻿CREATE TABLE [DW].[FTO_DADOS_FLUXO] (
+﻿CREATE TABLE [dw].[FTO_DADOS_FLUXO] (
     [CO_CURSO]                     INT            NULL,
     [CO_MUNICIPIO]                 INT            NULL,
-    [IN_CAPITAL]                   INT            NULL,
-    [TP_DIMENSAO]                  INT            NULL,
-    [TP_REDE]                      INT            NULL,
+    [IN_CAPITAL]                   BIT            NULL,
+    [TP_DIMENSAO]                  TINYINT        NULL,
+    [TP_REDE]                      TINYINT        NULL,
     [CO_IES]                       INT            NULL,
-    [CO_CINE_ROTULO]               VARCHAR (8000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [TP_GRAU_ACADEMICO]            INT            NULL,
-    [IN_GRATUITO]                  INT            NULL,
-    [TP_MODALIDADE_ENSINO]         INT            NULL,
-    [TP_NIVEL_ACADEMICO]           INT            NULL,
-    [NU_ANO_CENSO]                 INT            NULL,
-    [NU_ANO_INGRESSO]              INT            NULL,
-    [NU_PRAZO_INTEGRALIZACAO]      INT            NULL,
-    [NU_ANO_INTEGRALIZACAO]        INT            NULL,
-    [NU_PRAZO_ACOMPANHAMENTO]      INT            NULL,
-    [NU_ANO_MAXIMO_ACOMPANHAMENTO] INT            NULL,
+    [CO_CINE_ROTULO]               CHAR (7)       NULL,
+    [TP_GRAU_ACADEMICO]            TINYINT        NULL,
+    [IN_GRATUITO]                  BIT            NULL,
+    [TP_MODALIDADE_ENSINO]         TINYINT        NULL,
+    [TP_NIVEL_ACADEMICO]           TINYINT        NULL,
+    [TP_ORGANIZACAO_ACADEMICA]     TINYINT        NULL,
+    [TP_CATEGORIA_ADMINISTRATIVA]  TINYINT        NULL,
+    [NU_ANO_CENSO]                 SMALLINT       NULL,
+    [NU_ANO_INGRESSO]              SMALLINT       NULL,
+    [NU_PRAZO_INTEGRALIZACAO]      TINYINT        NULL,
+    [NU_ANO_INTEGRALIZACAO]        SMALLINT       NULL,
+    [NU_PRAZO_ACOMPANHAMENTO]      TINYINT        NULL,
+    [NU_ANO_MAXIMO_ACOMPANHAMENTO] SMALLINT       NULL,
     [QT_INGRESSANTE]               INT            NULL,
     [QT_PERMANENCIA]               INT            NULL,
     [QT_CONCLUINTE]                INT            NULL,
     [QT_DESISTENCIA]               INT            NULL,
     [QT_FALECIDO]                  INT            NULL,
-    [VL_TAP]                       FLOAT (53)     NULL,
-    [VL_TCA]                       FLOAT (53)     NULL,
-    [VL_TDA]                       FLOAT (53)     NULL,
-    [VL_TCAN]                      FLOAT (53)     NULL,
-    [VL_TDAN]                      FLOAT (53)     NULL,
-    [CO_CATALOGO]                  INT            NULL
+    [VL_TAP]                       NUMERIC (4, 3) NULL,
+    [VL_TCA]                       NUMERIC (4, 3) NULL,
+    [VL_TDA]                       NUMERIC (4, 3) NULL,
+    [VL_TCAN]                      NUMERIC (4, 3) NULL,
+    [VL_TDAN]                      NUMERIC (4, 3) NULL,
+    [CO_CATALOGO]                  INT            NOT NULL,
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_CINE] FOREIGN KEY ([CO_CINE_ROTULO]) REFERENCES [dw].[DIM_CINE] ([CO_CINE_ROTULO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_CURSO] FOREIGN KEY ([CO_CURSO]) REFERENCES [dw].[DIM_CURSO] ([CO_CURSO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_IES] FOREIGN KEY ([CO_IES]) REFERENCES [dw].[DIM_IES] ([CO_IES]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_REGIAO] FOREIGN KEY ([CO_MUNICIPIO]) REFERENCES [dw].[DIM_REGIAO] ([CO_MUNICIPIO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_TIPO_DIMENSAO] FOREIGN KEY ([TP_DIMENSAO]) REFERENCES [dw].[DIM_TIPO_DIMENSAO] ([TP_DIMENSAO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_TIPO_GRAU_ACADEMICO] FOREIGN KEY ([TP_GRAU_ACADEMICO]) REFERENCES [dw].[DIM_TIPO_GRAU_ACADEMICO] ([TP_GRAU_ACADEMICO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_TIPO_MODALIDADE_ENSINO] FOREIGN KEY ([TP_MODALIDADE_ENSINO]) REFERENCES [dw].[DIM_TIPO_MODALIDADE_ENSINO] ([TP_MODALIDADE_ENSINO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_TIPO_NIVEL_ACADEMICO] FOREIGN KEY ([TP_NIVEL_ACADEMICO]) REFERENCES [dw].[DIM_TIPO_NIVEL_ACADEMICO] ([TP_NIVEL_ACADEMICO]),
+    CONSTRAINT [FK_FTO_FLUXO_CURSO_DIM_TIPO_REDE] FOREIGN KEY ([TP_REDE]) REFERENCES [dw].[DIM_TIPO_REDE] ([TP_REDE])
 );
+
+
+
+GO
+CREATE CLUSTERED INDEX [IXC_FTO_DADOS_fluxo]
+    ON [dw].[FTO_DADOS_FLUXO]([NU_ANO_CENSO] ASC, [CO_CURSO] ASC, [CO_MUNICIPIO] ASC, [TP_DIMENSAO] ASC, [TP_REDE] ASC, [CO_IES] ASC, [NU_ANO_INGRESSO] ASC, [CO_CINE_ROTULO] ASC, [TP_GRAU_ACADEMICO] ASC, [TP_MODALIDADE_ENSINO] ASC, [TP_NIVEL_ACADEMICO] ASC, [TP_ORGANIZACAO_ACADEMICA] ASC, [TP_CATEGORIA_ADMINISTRATIVA] ASC);
+
+
 

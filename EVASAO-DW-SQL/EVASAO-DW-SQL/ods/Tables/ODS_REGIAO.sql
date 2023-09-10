@@ -1,0 +1,5 @@
+﻿CREATE TABLE [ods].[ODS_REGIAO] (
+    [CO_REGIAO] TINYINT      NOT NULL,
+    [NO_REGIAO] VARCHAR (20) NULL
+);
+

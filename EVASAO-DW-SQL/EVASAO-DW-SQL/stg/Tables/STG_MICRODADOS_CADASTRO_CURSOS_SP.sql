@@ -1,32 +1,32 @@
-﻿CREATE TABLE [stg].[STG_MICRODADOS_CADASTRO_CURSOS_SP] (
+CREATE TABLE [stg].[STG_MICRODADOS_CADASTRO_CURSOS_SP] (
     [NU_ANO_CENSO]                 INT           NULL,
-    [NO_REGIAO]                    VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_REGIAO]                    VARCHAR (20)  NULL,
     [CO_REGIAO]                    INT           NULL,
-    [NO_UF]                        VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [SG_UF]                        VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_UF]                        VARCHAR (200) NULL,
+    [SG_UF]                        VARCHAR (200) NULL,
     [CO_UF]                        INT           NULL,
-    [NO_MUNICIPIO]                 VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_MUNICIPIO]                 VARCHAR (200) NULL,
     [CO_MUNICIPIO]                 INT           NULL,
     [IN_CAPITAL]                   INT           NULL,
-    [TP_DIMENSAO]                  INT           NULL,
-    [TP_ORGANIZACAO_ACADEMICA]     INT           NULL,
-    [TP_CATEGORIA_ADMINISTRATIVA]  INT           NULL,
-    [TP_REDE]                      INT           NULL,
+    [TP_DIMENSAO]                  TINYINT       NULL,
+    [TP_ORGANIZACAO_ACADEMICA]     TINYINT       NULL,
+    [TP_CATEGORIA_ADMINISTRATIVA]  TINYINT       NULL,
+    [TP_REDE]                      TINYINT       NULL,
     [CO_IES]                       INT           NULL,
-    [NO_CURSO]                     VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_CURSO]                     VARCHAR (200) NULL,
     [CO_CURSO]                     INT           NULL,
-    [NO_CINE_ROTULO]               VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [CO_CINE_ROTULO]               VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_CINE_ROTULO]               VARCHAR (200) NULL,
+    [CO_CINE_ROTULO]               VARCHAR (200) NULL,
     [CO_CINE_AREA_GERAL]           INT           NULL,
-    [NO_CINE_AREA_GERAL]           VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_CINE_AREA_GERAL]           VARCHAR (200) NULL,
     [CO_CINE_AREA_ESPECIFICA]      INT           NULL,
-    [NO_CINE_AREA_ESPECIFICA]      VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [NO_CINE_AREA_ESPECIFICA]      VARCHAR (200) NULL,
     [CO_CINE_AREA_DETALHADA]       INT           NULL,
-    [NO_CINE_AREA_DETALHADA]       VARCHAR (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-    [TP_GRAU_ACADEMICO]            INT           NULL,
+    [NO_CINE_AREA_DETALHADA]       VARCHAR (200) NULL,
+    [TP_GRAU_ACADEMICO]            TINYINT       NULL,
     [IN_GRATUITO]                  INT           NULL,
-    [TP_MODALIDADE_ENSINO]         INT           NULL,
-    [TP_NIVEL_ACADEMICO]           INT           NULL,
+    [TP_MODALIDADE_ENSINO]         TINYINT       NULL,
+    [TP_NIVEL_ACADEMICO]           TINYINT       NULL,
     [QT_CURSO]                     INT           NULL,
     [QT_VG_TOTAL]                  INT           NULL,
     [QT_VG_TOTAL_DIURNO]           INT           NULL,
@@ -200,6 +200,10 @@
     [QT_MAT_MOB_ACADEMICA]         INT           NULL,
     [QT_CONC_MOB_ACADEMICA]        INT           NULL
 );
+
+
+
+
 
 
 GO

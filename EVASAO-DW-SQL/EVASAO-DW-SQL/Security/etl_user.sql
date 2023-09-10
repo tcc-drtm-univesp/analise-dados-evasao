@@ -1,0 +1,2 @@
+﻿CREATE USER [etl_user] WITHOUT LOGIN;
+

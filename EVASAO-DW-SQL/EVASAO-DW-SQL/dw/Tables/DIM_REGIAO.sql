@@ -7,11 +7,13 @@
     [NO_MESORREGIAO]  VARCHAR (100) NULL,
     [CO_UF]           TINYINT       NOT NULL,
     [NO_UF]           VARCHAR (30)  NULL,
-    [SG_UF]           CHAR (2)      NULL,
+    [SG_UF]           VARCHAR (3)   NULL,
     [CO_REGIAO]       TINYINT       NOT NULL,
     [NO_REGIAO]       VARCHAR (20)  NULL,
     CONSTRAINT [PK_DIM_REGIAO] PRIMARY KEY CLUSTERED ([CO_MUNICIPIO] ASC)
 );
+
+
 
 
 /*

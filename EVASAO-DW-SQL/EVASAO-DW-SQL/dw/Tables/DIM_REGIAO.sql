@@ -28,5 +28,8 @@ CO_MUNICIPIO
 , SG_UF
 , CO_REGIAO
 , NO_REGIAO
-)values(0,'Não informado',0,'Não informado',0,'Não informado',0,'Não informado','NI',0,'Não informado')
+)
+values
+(0,'Não informado',0,'Não informado',0,'Não informado',0,'Não informado','NI',0,'Não informado'),
+(1, 'EAD', 1, 'EAD', 1,'EAD',1,'EAD', 'EAD', 1, 'EAD')
 */

@@ -163,3 +163,5 @@ cython_debug/
 *.suo
 EVASAO-DW-SQL/EVASAO-DW-SQL/EVASAO-DW-SQL.dbmdl
 EVASAO-DW-SQL/EVASAO-DW-SQL/EVASAO-DW-SQL.jfm
+/EVASAO-DW-SQL/.vs/EVASAO-DW-SQL
+/etl/ods_normalizacao.sql

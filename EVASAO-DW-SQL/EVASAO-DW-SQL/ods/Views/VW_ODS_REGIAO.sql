@@ -1,0 +1,13 @@
+﻿CREATE VIEW ODS.VW_ODS_REGIAO
+
+AS 
+ WITH REGIAO AS (
+	SELECT CO_REGIAO, NO_REGIAO 
+	FROM (VALUES 
+	(1,'Norte'			),
+	(2,'Nordeste'		),
+	(3,'Sudeste'		),
+	(4,'Sul'			),
+	(5,'Centro-Oeste'	)
+	) AS ODS_REGIAO(CO_REGIAO, NO_REGIAO )
+) SELECT CO_REGIAO, NO_REGIAO  FROM REGIAO

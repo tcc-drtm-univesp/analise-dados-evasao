@@ -1,10 +1,7 @@
 ﻿CREATE TABLE [ods].[ODS_UNIDADE_FEDERATIVA] (
-    [CO_UF]     TINYINT      NOT NULL,
-    [NO_UF]     VARCHAR (30) NULL,
-    [SG_UF]     CHAR (2)     NULL,
-    [CO_REGIAO] TINYINT      NULL,
-    CONSTRAINT [PK_ODS_UNIDADE_FEDERATIVA] PRIMARY KEY CLUSTERED ([CO_UF] ASC)
+    [CO_UF]     INT           NULL,
+    [NO_UF]     VARCHAR (200) NULL,
+    [SG_UF]     VARCHAR (200) NULL,
+    [CO_REGIAO] INT           NULL
 );
-
-
 

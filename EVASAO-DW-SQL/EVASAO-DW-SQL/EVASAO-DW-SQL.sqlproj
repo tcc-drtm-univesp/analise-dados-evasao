@@ -13,15 +13,18 @@
     </RootPath>
     <RootNamespace>EVASAO_DW_SQL</RootNamespace>
     <AssemblyName>EVASAO_DW_SQL</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,56 +59,65 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="stg\" />
-    <Folder Include="stg\Tables\" />
     <Folder Include="ods\" />
     <Folder Include="ods\Tables\" />
+    <Folder Include="stg\" />
+    <Folder Include="stg\Tables\" />
     <Folder Include="DW\" />
     <Folder Include="DW\Tables\" />
-    <Folder Include="DW\Views\" />
+    <Folder Include="ods\Views\" />
+    <Folder Include="ods\Stored Procedures\" />
+    <Folder Include="DW\Stored Procedures\" />
+    <Folder Include="adm\" />
+    <Folder Include="adm\Stored Procedures\" />
     <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="stg\Tables\STG_INDICADORES_TRAJETORIA_EDUCACAO_SUPERIOR_SP.sql" />
-    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_IES_SP.sql" />
-    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_CURSOS_SP.sql" />
-    <Build Include="ods\Tables\ODS_MUNICIPIO.sql" />
-    <Build Include="ods\Tables\ODS_MICRORREGIAO.sql" />
-    <Build Include="ods\Tables\ODS_MESORREGIAO.sql" />
-    <Build Include="ods\Tables\ODS_DADOS_FLUXO.sql" />
-    <Build Include="ods\Tables\ODS_CATALOGO.sql" />
-    <Build Include="ods\Tables\ODS_DADOS_IES.sql" />
-    <Build Include="ods\Tables\ODS_DADOS_CURSO.sql" />
-    <Build Include="ods\Tables\ODS_CURSO.sql" />
-    <Build Include="ods\Tables\ODS_CINE_AREA_DETALHADA.sql" />
-    <Build Include="ods\Tables\ODS_CINE_ROTULO.sql" />
-    <Build Include="ods\Tables\ODS_CINE_AREA_GERAL.sql" />
-    <Build Include="ods\Tables\ODS_CINE_AREA_ESPECIFICA.sql" />
-    <Build Include="ods\Tables\ODS_IES.sql" />
-    <Build Include="ods\Tables\ODS_UNIDADE_FEDERATIVA.sql" />
-    <Build Include="ods\Tables\ODS_MANTENEDORA_IES.sql" />
-    <Build Include="DW\Tables\DIM_REGIAO.sql" />
-    <Build Include="DW\Tables\DIM_IES.sql" />
-    <Build Include="DW\Tables\FTO_DADOS_FLUXO.sql" />
-    <Build Include="DW\Tables\FTO_DADOS_IES.sql" />
-    <Build Include="DW\Tables\DIM_CINE.sql" />
-    <Build Include="Security\stg.sql" />
-    <Build Include="Security\ods.sql" />
-    <Build Include="Security\DW.sql" />
+    <Build Include="ods\Tables\ODS_CINE_CURSO_GRANDE_AREA.sql" />
+    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_CURSOS_COMPLETO.sql" />
+    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_CURSOS_RED.sql" />
     <Build Include="ods\Tables\ODS_REGIAO.sql" />
-    <Build Include="DW\Tables\FTO_DADOS_CURSO.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_REDE.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_ORGANIZACAO_ACADEMICA.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_NIVEL_ACADEMICO.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_MODALIDADE_ENSINO.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_GRAU_ACADEMICO.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_DIMENSAO.sql" />
-    <Build Include="DW\Tables\DIM_TIPO_CATEGORIA_ADMINISTRATIVA.sql" />
-    <Build Include="DW\Tables\DIM_CURSO.sql" />
-    <Build Include="Security\etl_user.sql" />
-    <Build Include="DW\Views\VW_FTO_DADOS_FLUXO.sql" />
-    <Build Include="DW\Views\VW_FTO_DADOS_CURSO.sql" />
+    <Build Include="ods\Tables\ODS_IES.sql" />
+    <Build Include="ods\Tables\ODS_MUNICIPIO.sql" />
+    <Build Include="stg\Tables\STG_MICRODADOS_CADASTRO_IES_COMPLETO.sql" />
+    <Build Include="DW\Tables\DIM_CINE.sql" />
     <Build Include="stg\Tables\STG_RELATORIO_DTB_BRASIL_DISTRITO.sql" />
-    <Build Include="DW\Views\vw_fto_dados_ies.sql" />
+    <Build Include="stg\Tables\STG_DADOS_FLUXO.sql" />
+    <Build Include="ods\Tables\ODS_CURSO.sql" />
+    <Build Include="ods\Tables\ODS_DADOS_FLUXO.sql" />
+    <Build Include="DW\Tables\FTO_DADOS_FLUXO.sql" />
+    <Build Include="ods\Tables\ODS_MANTENEDORA_IES.sql" />
+    <Build Include="ods\Tables\ODS_UNIDADE_FEDERATIVA.sql" />
+    <Build Include="DW\Tables\DIM_CURSO.sql" />
+    <Build Include="DW\Tables\DIM_IES.sql" />
+    <Build Include="DW\Tables\DIM_REGIAO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_CATEGORIA_ADMINISTRATIVA.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_GRAU_ACADEMICO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_MODALIDADE_ENSINO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_NIVEL_ACADEMICO.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_ORGANIZACAO_ACADEMICA.sql" />
+    <Build Include="DW\Tables\DIM_TIPO_REDE.sql" />
+    <Build Include="ods\Tables\ODS_CINE_CURSO_AREA.sql" />
+    <Build Include="ods\Views\VW_ODS_REGIAO.sql" />
+    <Build Include="ods\Views\VW_ODS_MUNICICIPIO_CAPITAL.sql" />
+    <Build Include="ods\Views\VW_ODS_FTO_DADOS_FLUXO.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_CINE_CURSO_AREA.sql" />
+    <Build Include="ods\Stored Procedures\sp_ODS_CINE_CURSO_GRANDE_AREA.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_CURSO.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_UNIDADE_FEDERATIVA.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_MUNICIPIO.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_MANTENEDORA.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_IES.sql" />
+    <Build Include="ods\Stored Procedures\SP_ODS_DADOS_FLUXO.sql" />
+    <Build Include="DW\Stored Procedures\SP_DIM_IES.sql" />
+    <Build Include="DW\Stored Procedures\SP_DIM_CURSO.sql" />
+    <Build Include="DW\Stored Procedures\SP_DIM_CINE.sql" />
+    <Build Include="DW\Stored Procedures\SP_FTO_DADOS_FLUXO.sql" />
+    <Build Include="DW\Stored Procedures\SP_dim_REGIAO.sql" />
+    <Build Include="adm\Stored Procedures\SP_FLUXO_ETL.sql" />
+    <Build Include="Security\adm.sql" />
+    <Build Include="Security\DW.sql" />
+    <Build Include="Security\ods.sql" />
+    <Build Include="Security\stg.sql" />
   </ItemGroup>
 </Project>

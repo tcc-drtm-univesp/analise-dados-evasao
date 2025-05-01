@@ -1,0 +1,6 @@
+﻿CREATE TABLE [ods].[ODS_CINE_CURSO_AREA] (
+    [COD_AREA]        NVARCHAR (200) NULL,
+    [NME_AREA]        NVARCHAR (200) NULL,
+    [COD_GRANDE_AREA] INT            NULL
+);
+

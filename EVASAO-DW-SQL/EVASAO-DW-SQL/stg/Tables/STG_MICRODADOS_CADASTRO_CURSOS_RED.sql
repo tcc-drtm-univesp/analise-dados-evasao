@@ -1,0 +1,25 @@
+﻿CREATE TABLE [stg].[STG_MICRODADOS_CADASTRO_CURSOS_RED] (
+    [NU_ANO_CENSO]                INT            NULL,
+    [CO_MUNICIPIO]                INT            NULL,
+    [IN_CAPITAL]                  INT            NULL,
+    [TP_DIMENSAO]                 INT            NULL,
+    [TP_ORGANIZACAO_ACADEMICA]    INT            NULL,
+    [TP_REDE]                     INT            NULL,
+    [TP_CATEGORIA_ADMINISTRATIVA] INT            NULL,
+    [CO_IES]                      INT            NULL,
+    [NO_CURSO]                    NVARCHAR (200) COLLATE Latin1_General_CI_AI NULL,
+    [CO_CURSO]                    INT            NULL,
+    [NO_CINE_ROTULO]              NVARCHAR (200) COLLATE Latin1_General_CI_AI NULL,
+    [CO_CINE_ROTULO]              NVARCHAR (200) COLLATE Latin1_General_CI_AI NULL,
+    [CO_CINE_AREA_GERAL]          INT            NULL,
+    [NO_CINE_AREA_GERAL]          NVARCHAR (200) COLLATE Latin1_General_CI_AI NULL,
+    [CO_CINE_AREA_ESPECIFICA]     INT            NULL,
+    [NO_CINE_AREA_ESPECIFICA]     NVARCHAR (200) COLLATE Latin1_General_CI_AI NULL,
+    [CO_CINE_AREA_DETALHADA]      INT            NULL,
+    [NO_CINE_AREA_DETALHADA]      NVARCHAR (200) COLLATE Latin1_General_CI_AI NULL,
+    [TP_GRAU_ACADEMICO]           INT            NULL,
+    [IN_GRATUITO]                 INT            NULL,
+    [TP_MODALIDADE_ENSINO]        INT            NULL,
+    [TP_NIVEL_ACADEMICO]          INT            NULL
+);
+

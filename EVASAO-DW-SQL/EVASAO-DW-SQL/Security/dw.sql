@@ -1,11 +1,3 @@
-﻿CREATE SCHEMA [dw]
+﻿CREATE SCHEMA [DW]
     AUTHORIZATION [dbo];
-
-
-
-
-
-
-
-
 
